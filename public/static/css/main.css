@@ -1,6 +1,7 @@
 /* Uncomment this block for a web app with full screen height and width. */
 
-/* body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -9,5 +10,26 @@ body {
 }
 
 #root {
+  display: flex;
   height: 100%;
-} */
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.log {
+  flex: 1;
+  overflow: hidden;
+}
+
+.log__log-scroll {
+  height: 100%;
+}
+
+.webchat {
+  flex: 1;
+  overflow: hidden;
+}

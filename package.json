@@ -14,8 +14,12 @@
     "start:typescript": "npm run build:typescript -- --watch"
   },
   "dependencies": {
+    "botframework-directlinejs": "^0.15.3-master.31ba05b",
+    "botframework-webchat": "^4.15.8-main.20230414.504fb24",
+    "punycode": "^2.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-scroll-to-bottom": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",

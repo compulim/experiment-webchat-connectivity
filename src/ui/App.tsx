@@ -1,5 +1,7 @@
+import Chat from './Chat';
+
 const App = () => {
-  return <h1>Hello, World!</h1>;
+  return <Chat />;
 };
 
 export default App;
