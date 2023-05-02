@@ -1,6 +1,8 @@
 import { DirectLineStreaming } from 'botframework-directlinejs';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import ReactWebChat, { createStore } from 'botframework-webchat';
+
+// @ts-expect-error 7016
 import ScrollToBottom from 'react-scroll-to-bottom';
 
 const TOKEN_URL = 'https://webchat-mockbot3.azurewebsites.net/api/token/directlinease';
