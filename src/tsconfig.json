@@ -8,5 +8,8 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true
-  }
+  },
+  "exclude": [
+    "src/external/**/*"
+  ]
 }

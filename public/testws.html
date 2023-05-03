@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width" name="viewport" />
+    <title>Web Chat connectivity test</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      'use strict';
+
+      (function () {
+        console.log('connecting');
+
+        const ws = new WebSocket(
+          'wss://webchat-mockbot3.azurewebsites.net/.bot/v3/directline/conversations/connect?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3QiOiJ3ZWJjaGF0LW1vY2tib3QzIiwic2l0ZSI6ImpnVXZ5OXk0VEpJIiwiY29udiI6IjhEZU5tR2d2VFFWOXhORDVyZG1mcHMiLCJqdGkiOiJmZjczNDQzNjVmNGI0OWMyYTRjNzQxZmZjOGQ2MjJlMyIsInVzZXIiOiJkbF94NnZ3NzcycGViIiwib3JpZ2luIjpbImh0dHBzOi8vY29tcHVsaW0uZ2l0aHViLmlvLyIsImh0dHBzOi8vbWljcm9zb2Z0LmdpdGh1Yi5pby8iLCJodHRwczovL3dlYmNoYXQtbW9ja2JvdDIuYXp1cmV3ZWJzaXRlcy5uZXQvIl0sIm5iZiI6MTY4MzA1NjMxNiwiZXhwIjoxNjgzMDU4MTE2LCJpc3MiOiJodHRwczovL2RpcmVjdGxpbmVleHRlbnNpb24uYm90ZnJhbWV3b3JrLmNvbS8iLCJhdWQiOiJodHRwczovL2RpcmVjdGxpbmVleHRlbnNpb24uYm90ZnJhbWV3b3JrLmNvbS8ifQ.KvE0mwYDA3b2aYPNwcPgTKWqp1sVxOMN62ZhEvJMuxk'
+        );
+
+        ws.onclose = () => {
+          console.log('ws.onclose');
+        };
+
+        ws.onerror = () => {
+          console.log('ws.onerror');
+        };
+
+        ws.onopen = () => {
+          console.log('ws.onopen');
+        };
+
+        ws.onmessage = () => {
+          console.log('ws.onmessage');
+        };
+
+        new Promise(() => {
+          console.log('promise created');
+        });
+      })();
+    </script>
+  </body>
+</html>

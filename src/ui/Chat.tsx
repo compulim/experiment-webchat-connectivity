@@ -1,4 +1,5 @@
-import { DirectLineStreaming } from 'botframework-directlinejs';
+// import { DirectLineStreaming } from 'botframework-directlinejs';
+import { DirectLineStreaming } from '../external/botframework-directlinejs/src/directLineStreaming';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import ReactWebChat, { createStore } from 'botframework-webchat';
 
@@ -21,6 +22,17 @@ const Chat = () => {
   );
 
   const appendLog = useCallback<(message: string) => void>(message => setLog(log => [...log, message]), [setLog]);
+
+  // const handleReconnectClick = useCallback<() => void>(() => {
+  //   if (directLine && token) {
+  //     // @ts-ignore
+  //     const { conversationId } = directLine;
+
+  //     console.log('UI: Reconnect clicked', { conversationId });
+
+  //     directLine.reconnect({ conversationId, token });
+  //   }
+  // }, [directLine, token]);
 
   const store = useMemo(() => {
     return createStore({}, () => (next: any) => (action: any) => {
@@ -61,6 +73,9 @@ const Chat = () => {
   return (
     <main>
       <div className="log">
+        {/* <button onClick={handleReconnectClick} type="button">
+          Reconnect
+        </button> */}
         <ScrollToBottom className="log log__log-scroll">
           {log.map((message, index) => (
             <div key={index}>

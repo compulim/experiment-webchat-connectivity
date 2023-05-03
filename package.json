@@ -15,11 +15,14 @@
   },
   "dependencies": {
     "botframework-directlinejs": "^0.15.3-master.31ba05b",
+    "botframework-streaming": "^4.20.0-ww.20230425",
     "botframework-webchat": "^4.15.8-main.20230414.504fb24",
+    "cross-fetch": "^3.1.5",
     "punycode": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scroll-to-bottom": "^4.2.0"
+    "react-scroll-to-bottom": "^4.2.0",
+    "rxjs": "^5.5.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
